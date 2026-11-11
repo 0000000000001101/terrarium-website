@@ -1,0 +1,147 @@
+<!-- This is required at the top of an HTML document to tell the browser to render the file in standards mode
+ rather than in quirks mode. It ensures that your layout, CSS, and modern
+ web features display consistently across different web browsers.
+
+ It also tells the renderer that you are using HTML 5.
+ 
+ Standards mode (strict mode):
+ The browser renders the page using modern official rules from W3C. It includes:
+ - W3C box model (width and height do not include padding and borders by default).
+ - Enforces strict syntax, font size inheritance, and baseline image alignment.
+ - CSS class and ID names are case-sensitive.
+
+ Quirks mode:
+ This is the older, non-standard, buggy rendering.
+ - Uses the old IE5 box model (width includes padding and borders).
+ - Allows loose, malformed markup and non-standard ss.
+ - Images align to the bottom instead of ht ebaseline, and tables do not inherit font sizes.
+ - CSS class and ID names are case=insensitive.
+
+ You should rarely ever use quirks mode. Only ever when supporting legacy websites that break under modern rules.
+ -->
+<!DOCTYPE html>
+
+<!-- The <html></html> tags enclose everything in your website apart from the DOCTYPE declaration.
+
+ Note that most elements have an opening and closing tags. The exceptions are self-closing / void tags.
+-->
+<html>
+
+    <!-- The head section of an HTML file is hidden from the user (does not display on the website). Rather, it is
+     used for specifying metadata (data about data). -->
+    <head>
+
+        <!-- The title shows on the browser tab and in search engine results. -->
+        <title> Sample website </title>
+
+        <!--- This specifies the character encoding of the webpage. Essentially it tells the webpage in what format
+        (of bits/bytes) to store information as binary or hex. -->
+        <meta charset = "UTF-8">
+
+        <!-- Meta name attributes are used in name-value pairs.
+         Name tells you the property name (type of metadata), while content defines its value. -->
+        <meta name="description" content="websitaroo">
+        <meta name="author" content="Nadia Steffler">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Link the CSS and JS pages over, if you have any. -->
+        <link rel="stylesheet" href="main-css.css"> <!-- rel means relationsihp and defines the connection of the href to the web page. -->
+        <script src="main-js.js"></script>
+
+    </head>
+
+    <body>
+
+        <!-- The box model in web dev is a model that groups elements into boxes. Every single individual element (ex. every header <h1>
+         and every paragraph <p> can be )
+        -->
+
+        <!-- The div element is non-semantic, meaning it does not add any hierarchical significance to the elements within the div.
+         It is simply a container used to box up multiple elements together both for organizational purposes and so that any css properties
+         applied to the parent div will be applied to its children elements.
+
+         Because the div wraps around / 'contains' other elements, it is known as a parent element. Its children are the elements that it
+         is wrapped around.
+
+         The parent-children relationship is not restricted to div elements.
+        -->
+        <div id="page">
+
+            <!-- Headers are semantic elements, meaning that the different header levels have different hierarchical importances.
+
+             The tag <header> is a grouping element, similar to div. It functions similarly to <div id="header">.
+
+             h1 is the most important header, with importance decreasing down h2, h3, h4, h5, and h6. This importance for SEO (Search Engine
+             Optimization) and for accessibility (ex. screen readers).
+
+             Search Engine Optimization is a factor to take into account to help your website show up in higher ranks when using a search
+             engine.
+            -->
+            <header>
+                <h1> This is a header. </h1>
+            </header>
+
+            <p> This is a paragraph with no id and no class. </p>
+
+            <!-- ids are used in html and css as unique identifiers for a specific element. No two elements may share the same id, and
+             no one element may have more than one id.
+             An element may have an id and a/several class[es] at the same time.
+            -->
+            <p id="paragraph1"> This is a paragraph with id "paragraph1". </p>
+
+            <!-- classes are used as unique identifiers for several elements at once. Multiple elements may belong to the same class, and
+             one element may belong to more than one class.
+            -->
+            <p class="paragraphs"> This is a paragraph belonging to class "paragraphs". </p>
+            <p class="paragraphs"> This is another paragraph belonging to class "paragraphs". </p>
+        </div>
+
+        <p>
+            Below you will see a float box. This allows for left-right alignment of elements (in this case, images with text.)
+        </p>
+        
+        <!-- Right now, the elements in this div container just consist of a regular image and paragraph. The page alignment will be taken
+         care of in the CSS file.
+        -->
+        <div id="float-box">
+            <!-- This is an img tag. It is a self closing tag, meaning it does not need a closing </src> tag, nor does it have
+             content between the tags.
+
+             The src attribute provides the image's path.
+
+             The alt attribute is an accessibility aid; if the image cannot be loaded, the alt text will be displayed instead. It is also
+             read by screen readers and helps with SEO (Search Engine Optimization).
+
+             The width and height attributes determine, self-explanatorialy, the width and height of the image. They accept a multitude of
+             parameters:
+             __ px: This gives a static size in pixels
+             __ %: This gives you a size in relation to the size of the image's parent
+             __ vh, __ vw: Respectively, they give you a size in relation to the size of the viewport height and viewport width.
+            -->
+            <img src="little rat.jpg" alt="" height="100px" width="100px" class="float-box-item">
+            <p class="float-box-item"> Here is some text within the float-box. </p>
+        </div>
+
+        <p>
+            Before you start making the actual website, it's good to have a plan in mind. On a paper or a tablet, draw out a layout for your
+            website. What do you want to go where? What text and where; what images and where. Maybe plan out a colour scheme.
+            (Ideally Alex and I would like to see the plan before you start making the website so that we can tell you if there is anything
+            either redundant or missing.)
+
+            It should not take terribly long to make a simple website. We would like for you guys to make a basic, bare bones website with
+            some text and maybe some placeholder images in a few days. Ideally, your goal should be to have this done by Wednesday/Thursday.
+
+            Once you have just a bareboned website giving some information about the project (simple HTML, simple CSS), then you can get into
+            some of the more complicated elements of HTML and properties in CSS. This includes adding an element to let the user download the 
+            eventually provided .exe file to download the Terrarium application.
+
+            This page should give you a very basic starting point. Now you can look up how to add different elements; how to link pages together
+            / make a nav bar if you so choose to.
+
+            Make it fancy! Add animations (can add scroll animations, onclick animations) if you'd like; you can add JavaScript if you'd like.
+            Make it look nice - make sure the website is visually pleasing.
+        </p>
+
+    </body>
+
+</html>

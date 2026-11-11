@@ -1,0 +1,42 @@
+/* CSS property assignment uses cascade rules.
+
+ Importance: Some individual properties can be assigned utmost importance using the !important tag. This means that
+ this property will take precendence over all other properties and, thus, the 
+ * You likely will not be using the !important tag *
+
+ Specificity: Properties will be applied in the order of accordance of how specific the selector is. Here is the
+ order of importance: (properties applied to a higher specifier will override those of less important specifiers)
+ 1. Inline styles (ex. style="color: red")
+ 2. IDs
+ 3. Classes, attributes, and pseudo-classes
+ 4. Elements and pseudo-elements
+*/
+
+/* To add properties to a base element, simply write the name of the element.
+*/
+p {
+    font-family: Georgia, 'Times New Roman', Times, serif; /* Change the font */
+}
+
+/* To add properties to an element based on id, add a # before the name of the id
+*/
+#paragraph1 {
+    background-color: antiquewhite;
+}
+
+/* To add properties to [an] element[s] based on class, add a . before the name of the class.
+*/
+.paragraphs {
+    background-color: beige;
+}
+
+/* Note: it does not matter the order of the properties applied in the braces themselves.
+*/
+.float-box-item {
+    float: left;
+    box-sizing: border-box; /* Include the margins and border widths in the total width of the element. Margins are not included. */
+    width: 50%;
+    padding: 5px; /* Applies padding to every side. */
+    padding-left: 10px; /* Overrides the padding applied to the left side. */
+    padding-right: 10px;
+}
