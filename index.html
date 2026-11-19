@@ -32,7 +32,7 @@
     <head>
 
         <!-- The title shows on the browser tab and in search engine results. -->
-        <title> Sample website </title>
+        <title> Terrierium </title>
 
         <!--- This specifies the character encoding of the webpage. Essentially it tells the webpage in what format
         (of bits/bytes) to store information as binary or hex. -->
@@ -51,6 +51,12 @@
     </head>
 
     <body>
+        <ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="news.html">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
 
         <!-- The box model in web dev is a model that groups elements into boxes. Every single individual element (ex. every header <h1>
          and every paragraph <p> can be )
@@ -77,12 +83,18 @@
              Search Engine Optimization is a factor to take into account to help your website show up in higher ranks when using a search
              engine.
             -->
-            <header>
-                <h1> This is a header. </h1>
-            </header>
+           <body>
+<header>
+    <h1>Terrarium</h1>
+  </header>
 
-            <p> This is a paragraph with no id and no class. </p>
+  <div class="buttons">
+    <a href="https://example.org"><button>Download For Linux</button></a>
+    <a href="https://google.ca"><button>Download For Windows</button></a>
+  </div>
+</body>
 
+            
             <!-- ids are used in html and css as unique identifiers for a specific element. No two elements may share the same id, and
              no one element may have more than one id.
              An element may have an id and a/several class[es] at the same time.

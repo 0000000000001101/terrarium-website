@@ -1,42 +1,103 @@
-/* CSS property assignment uses cascade rules.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Terrarium</title>
+  <style>
+    /* CSS property assignment uses cascade rules.
 
- Importance: Some individual properties can be assigned utmost importance using the !important tag. This means that
- this property will take precendence over all other properties and, thus, the 
- * You likely will not be using the !important tag *
+     Importance: Some individual properties can be assigned utmost importance using the !important tag. This means that
+     this property will take precedence over all other properties and, thus, the 
+     * You likely will not be using the !important tag *
 
- Specificity: Properties will be applied in the order of accordance of how specific the selector is. Here is the
- order of importance: (properties applied to a higher specifier will override those of less important specifiers)
- 1. Inline styles (ex. style="color: red")
- 2. IDs
- 3. Classes, attributes, and pseudo-classes
- 4. Elements and pseudo-elements
-*/
+     Specificity: Properties will be applied in the order of accordance of how specific the selector is. Here is the
+     order of importance: (properties applied to a higher specifier will override those of less important specifiers)
+     1. Inline styles (ex. style="color: red")
+     2. IDs
+     3. Classes, attributes, and pseudo-classes
+     4. Elements and pseudo-elements
+    */
 
-/* To add properties to a base element, simply write the name of the element.
-*/
-p {
-    font-family: Georgia, 'Times New Roman', Times, serif; /* Change the font */
+    /* To add properties to a base element, simply write the name of the element.
+    */
+    p {
+      font-family: Georgia, 'Times New Roman', Times, serif; /* Change the font */
+    }
+
+    /* To add properties to an element based on id, add a # before the name of the id
+    */
+    #paragraph1 {
+      /* background-color: antiquewhite; */
+    }
+
+    /* To add properties to [an] element[s] based on class, add a . before the name of the class.
+    */
+    .paragraphs {
+      /* background-color: beige; */
+    }
+
+    /* Note: it does not matter the order of the properties applied in the braces themselves.
+    */
+    .float-box-item {
+      float: left;
+      box-sizing: border-box; /* Include the margins and border widths in the total width of the element. Margins are not included. */
+      width: 50%;
+      padding: 5px; /* Applies padding to every side. */
+      padding-left: 10px; /* Overrides the padding applied to the left side. */
+      padding-right: 10px;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #00022E; /* Changes the whole page */
+      color: white; /* Makes all text white */
+    }
+
+    header {
+      text-align: center;
+      font-size: large;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
+    h2, p {
+      margin: 10px;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333333;
+    }
+
+    ul li {
+      float: left;
+    }
+
+    ul li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    ul li a:hover {
+      background-color: #111111;
+    }
+
+  .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
 }
-
-/* To add properties to an element based on id, add a # before the name of the id
-*/
-#paragraph1 {
-    background-color: antiquewhite;
-}
-
-/* To add properties to [an] element[s] based on class, add a . before the name of the class.
-*/
-.paragraphs {
-    background-color: beige;
-}
-
-/* Note: it does not matter the order of the properties applied in the braces themselves.
-*/
-.float-box-item {
-    float: left;
-    box-sizing: border-box; /* Include the margins and border widths in the total width of the element. Margins are not included. */
-    width: 50%;
-    padding: 5px; /* Applies padding to every side. */
-    padding-left: 10px; /* Overrides the padding applied to the left side. */
-    padding-right: 10px;
-}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Terrarium</h1>
+  </header>
+</body>
+</html>
