@@ -56,11 +56,11 @@ function showToast(message) {
 }
 
 document.getElementById('dl-linux').addEventListener('click', () => {
-  showToast('Linux build coming soon! 🐧');
-  Later: window.location.href = 'https://github.com/0000000000001101/terrarium/releases';
+  // showToast('Linux build coming soon! 🐧');
+  Later: window.location.href = 'https://github.com/0000000000001101/terrarium/releases/download/v0.1.0/Terrarium-Linux.x86_64';
 });
 
 document.getElementById('dl-windows').addEventListener('click', () => {
-  showToast('Windows build coming soon! 🪟');
-  Later: window.location.href = 'https://github.com/0000000000001101/terrarium/releases';
+  // showToast('Windows build coming soon! 🪟');
+  Later: window.location.href = 'https://github.com/0000000000001101/terrarium/releases/download/v0.1.0/Terrarium-Windows.exe';
 });
